@@ -11,5 +11,5 @@ CORS(app)
 
 @app.route('/')
 def helloWorld():
-    oauth(req="")
-    return "Hello, cross-origin-world!"
+    resp = oauth(req="")
+    return resp.client_id
