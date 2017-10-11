@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import random
 
+from config import DISCORD_TOKEN
+
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
 There are a number of utility commands being showcased here.'''
@@ -19,7 +21,7 @@ async def add(left : int, right : int):
     """Adds two numbers together."""
     await bot.say(left + right)
 
-@bot.command()
+@bot.command('roll')
 async def roll(dice : str):
     """Rolls a dice in NdN format."""
     try:
@@ -60,4 +62,4 @@ async def _bot():
     """Is the bot cool?"""
     await bot.say('Yes, the bot is cool.')
 
-bot.run('token')
+bot.run(DISCORD_TOKEN)

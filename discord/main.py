@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import logging
+from config import DISCORD_TOKEN
 
 # Setup logger
 logger = logging.getLogger('discord')
@@ -31,4 +32,4 @@ async def on_message(message):
         await asyncio.sleept(5)
         await client.send_message(message.channel, 'Done sleeping')
 
-client.run('pl46F9tVEoeFRLjjcUcS_JtQ12SJ33Xi')
+client.run(DISCORD_TOKEN)
