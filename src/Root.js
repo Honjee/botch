@@ -48,6 +48,7 @@ export default class Root extends React.Component {
     routeConfig: PropTypes.array.isRequired,
   };
   render() {
+    debugger
     const children = renderRouteConfigV3(null, this.props.routeConfig, '/');
     return (
       <Provider store={this.props.store}>
@@ -58,4 +59,3 @@ export default class Root extends React.Component {
     );
   }
 }
-
